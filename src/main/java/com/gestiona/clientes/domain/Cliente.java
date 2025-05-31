@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,13 +29,16 @@ public class Cliente {
     @Column(name = "id_cliente")
     private Integer id;
 
+    @Size(max = 30, min = 0)
     @NotBlank(message = "El nombre del cliente es obligatorio")
     @Column(name = "nom_cliente")
     private String nombre;
 
+    @Size(max = 30)
     @Column(name = "apellido1_cliente")
     private String apellido1;
 
+    @Size(max = 30)
     @Column(name = "apellido2_cliente")
     private String apellido2;
 
