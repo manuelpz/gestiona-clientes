@@ -1,6 +1,5 @@
 package com.gestiona.clientes.dto;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,11 +11,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ClienteDTO {
-	
+public class ClientePatchDTO {
+
 	private Integer id;
 	
-	@NotBlank
 	private String nombre;
 	
 	private String apellido1;
